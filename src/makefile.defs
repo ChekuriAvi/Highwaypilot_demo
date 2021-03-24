@@ -1,6 +1,6 @@
 # first include path has to be the include path of MakeDefs!!!
 
-include $(CM_DIR)/include/MakeDefs.win64
+include $(CM_DIR)/include/MakeDefs.linux64
 
 APP_VER = Car_Generic <insert.your.version.no>
 APP_NAME = CarMaker.$(ARCH)$(EXE_EXT)

@@ -1,5 +1,5 @@
 #******************************************************************************
-#**  CarMaker - Version 9.1
+#**  CarMaker - Version 9.1.1
 #**  Vehicle Dynamics Simulation Toolkit
 #**
 #**  Copyright (C)   IPG Automotive GmbH
@@ -13,7 +13,7 @@
 #**
 #******************************************************************************
 
-include C:/IPG/carmaker/win64-9.1/include/MakeDefs.win64
+include /opt/ipg/carmaker/linux64-9.1.1/include/MakeDefs.linux64
 
 APP_VER =		"Car_Generic <insert.your.version.no>"
 APP_NAME =		CarMaker.$(ARCH)$(EXE_EXT)

@@ -1,6 +1,6 @@
 /*
 ******************************************************************************
-**  CarMaker - Version 9.1
+**  CarMaker - Version 9.1.1
 **  Vehicle Dynamics Simulation Toolkit
 **
 **  Copyright (C)   IPG Automotive GmbH
@@ -156,7 +156,7 @@ double pid_ctrl(double e) {
     double y;
 
     esum = esum + e;
-    y = 0.21 * e + 0.0001 * esum /*+ Kd * (e – ealt) / Ta*/; /*0.51 und 0.0001*/
+    y = 0.21 * e + 0.0001 * esum /*+ Kd * (e ï¿½ ealt) / Ta*/; /*0.51 und 0.0001*/
     /*ealt = e;*/
     /*Log("y: %.2f \n", y);*/
 
@@ -170,7 +170,7 @@ double pid_ctrl_steer(double e) {
     double y;
 
     esum = esum + e;
-    y = 2 * e + 0.00005 * esum /*+ Kd * (e – ealt) / Ta*/; /*2 and 0.00005*/
+    y = 2 * e + 0.00005 * esum /*+ Kd * (e ï¿½ ealt) / Ta*/; /*2 and 0.00005*/
     /*ealt = e;*/
     /*Log("y: %.2f \n", y);*/
 
@@ -693,9 +693,9 @@ User_In (const unsigned CycleNo)
     Deviation_angle_path = RoadSensor[0].Path.Deviation.Ang;
     
     /*
-    v = Sqroot(µ * r * g)
-        µ    Reibungszahl
-        r    Radius der Kreisbahn(Krümmungsradius der Kurve)
+    v = Sqroot(ï¿½ * r * g)
+        ï¿½    Reibungszahl
+        r    Radius der Kreisbahn(Krï¿½mmungsradius der Kurve)
         g    Fallbeschleunigung
     */
     

@@ -31,40 +31,40 @@
 extern const char *SetConnectedIO (const char *io);
 
 static const char *CompileLibs[] = {
-    /* C:/IPG/carmaker/win64-9.1/lib/libcar.a */
-    /* C:/IPG/carmaker/win64-9.1/lib/libcarmaker.a */
-    /* C:/IPG/carmaker/win64-9.1/lib/libipgdriver.a */
-    /* C:/IPG/carmaker/win64-9.1/lib/libipgroad.a */
-    /* C:/IPG/carmaker/win64-9.1/lib/libipgtire.a */
-    "libcar.a	CarMaker-Car win64 9.1 2020-10-21",
-    "libcarmaker.a	CarMaker win64 9.1 2020-10-21",
-    "libipgdriver.a	IPGDriver win64 9.1 2020-10-20",
-    "libipgroad.a	IPGRoad win64 9.1 2020-10-20",
-    "libipgtire.a	IPGTire win64 9.0.2 2020-06-29",
+    /* /opt/ipg/carmaker/linux64-9.1.1/lib/libcar.a */
+    /* /opt/ipg/carmaker/linux64-9.1.1/lib/libcarmaker.a */
+    /* /opt/ipg/carmaker/linux64-9.1.1/lib/libipgdriver.a */
+    /* /opt/ipg/carmaker/linux64-9.1.1/lib/libipgroad.a */
+    /* /opt/ipg/carmaker/linux64-9.1.1/lib/libipgtire.a */
+    "libcar.a	CarMaker-Car linux64 9.1.1 2020-12-18",
+    "libcarmaker.a	CarMaker linux64 9.1.1 2020-12-18",
+    "libipgdriver.a	IPGDriver linux64 9.1 2020-10-20",
+    "libipgroad.a	IPGRoad linux64 9.1.1 2020-12-16",
+    "libipgtire.a	IPGTire linux64 9.0.2 2020-06-29",
     NULL
 };
 
 
 static const char *CompileFlags[] = {
-    "-m64 -O3 -DNDEBUG -DWIN32 -DWIN64 -DCM_NUMVER=90100",
-    "-IC:/IPG/carmaker/win64-9.1/include -Wall",
+    "-m64 -fPIC -O3 -DNDEBUG -DLINUX -DLINUX64 -D_GNU_SOURCE",
+    "-D_FILE_OFFSET_BITS=64 -DCM_NUMVER=90101",
+    "-I/opt/ipg/carmaker/linux64-9.1.1/include -Wall",
     "-Wimplicit -Wmissing-prototypes",
-    "-D__USE_MINGW_ANSI_STDIO",
     NULL
 };
 
 
 tAppStartInfo   AppStartInfo = {
     "Car_Generic <insert.your.version.no>",          /* App_Version         */
-    "918",          /* App_BuildVersion    */
-    "avinash.chekuri",     /* App_CompileUser     */
-    "laptop-b6ranobi",         /* App_CompileSystem   */
-    "2021-03-24 10:28:41",  /* App_CompileTime */
+    "1",          /* App_BuildVersion    */
+    "linux",     /* App_CompileUser     */
+    "linux",         /* App_CompileSystem   */
+    "2021-03-24 11:32:05",  /* App_CompileTime */
 
     CompileFlags,                /* App_CompileFlags  */
     CompileLibs,                 /* App_Libs          */
 
-    "9.1",          /* SetVersion        */
+    "9.1.1",          /* SetVersion        */
 
     NULL,           /* TestRunName       */
     NULL,           /* TestRunFName      */
