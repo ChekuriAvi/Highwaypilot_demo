@@ -16,7 +16,7 @@
 **
 **	User_Init_First ()
 **	User_PrintUsage ()
-**	User_ScanCmd Line ()
+**	User_ScanCmd L ine ()
 **
 **	User_AppLogFilter ()
 **
