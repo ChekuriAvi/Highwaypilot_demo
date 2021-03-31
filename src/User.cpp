@@ -9,9 +9,9 @@
 **                  Germany                      WWW    www.ipg-automotive.com
 ******************************************************************************
 **
-** F u n c t i ons
+** Functions
 ** ---------
-**
+** 
 ** Initialization
 **
 **	User_Init_First ()
