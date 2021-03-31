@@ -11,7 +11,7 @@
 **
 ** Functions
 ** ---------
-** Code Change
+** Code Changed
 ** Initialization
 **
 **	User_Init_First ()
